@@ -1,0 +1,15 @@
+Commands :
+
+
+fields:
+
+| fields <fields_name> ----> segregate data against fields name
+| fields -<fields_name> ---> hifen oparates as NOT
+ In field command field names are case-sensitive.
+ It can take wild card charecter.
+ And it is faster than table command.
+ 
+ 
+ rename: Rename the field name with a desired name.
+ 
+ | rename <field_name> as <new/desired field name>
