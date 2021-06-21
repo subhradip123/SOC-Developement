@@ -1,0 +1,25 @@
+whatever written in search box is called 'query'.
+
+Splunk uses SPL i.e. splunk search proceessing language
+
+
+META DATA:
+Meta data is the information about a data.
+Host: Ip from where the data generated
+Source: actual path of the data
+
+Sourcetype: Logical segregation of data.
+Say if you are using google chrome, history ralate data is different from your download related date, that is a kind of logical segregation.
+
+
+
+Splunk uses pipeline concept. i.e. output of before pipe will be the input for after pipe.
+
+save search:
+
+use of timeline:
+
+Field:
+Field is a searchable name or value in splunk.
+The field contains alphabets & neumarical value, alpha sign appears beside it.
+The field contains only neumarical value, hatch sign appears beside it.
