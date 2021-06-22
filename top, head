@@ -1,0 +1,15 @@
+top: used to fetch maximum occurance of field value.
+
+| top <field name>
+by default top will return 10 values
+| top <limit=number> <field name>
+
+top has two attributes
+showcount=f : count will not show, only percentage will show
+showperc=f : percentage will not show, only count will show.
+
+rare: opposite of top command
+
+head: shows the 1st 10 values from field.
+
+tail: opposite of head. shows the last 10 values form result.
