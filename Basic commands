@@ -1,6 +1,5 @@
 Commands :
 
-
 fields:
 
 | fields <fields_name> ----> segregate data against fields name
@@ -13,3 +12,25 @@ fields:
  rename: Rename the field name with a desired name.
  
  | rename <field_name> as <new/desired field name>
+ 
+ 
+ Replace : Replaces a field value with a desired value
+ 
+ | replace <old field value> with <new/desired field value> in <field name>
+ 
+ this old field value is case sensitive and can take wild card charecter.
+ field name is case sensitive and do not take wild card charecter.
+ 
+ 
+ Table: Uses to make tabular form of field values under a field name.
+ 
+ | table < field name 1> , <field name 2> , .........
+ 
+ Dedup: In table command every field value will appears as many times it occurs. To see the value once we will use dedup command with table command.
+ 
+ | table < field name 1> , <field name 2> , ......... | dedup < field name 1> , <field name 2> , .........
+ dedup command do not support wild card charecter.
+ 
+ 
+ where: used to compare the data.
+  where is case sensitive and do not support wild card charecter.
