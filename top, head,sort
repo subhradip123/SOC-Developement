@@ -13,3 +13,8 @@ rare: opposite of top command
 head: shows the 1st 10 values from field.
 
 tail: opposite of head. shows the last 10 values form result.
+
+
+sort: used to make data in accending or decending order.
+| sort <field name>  -------> change to assending order
+| sort -<field name> -------> change to decceending order.
