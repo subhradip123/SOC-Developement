@@ -1,0 +1,17 @@
+What is the difference between top and head command?
+
+
+Kapil is 25 years old.
+Dibyangsu lives in Chennai.
+kapil like red.
+SAi is 24 years old.
+Mustafa likes green.
+Kapil lives in Banglore.
+Mustafa works with splunk tech.
+
+Kapil happens 3 times, so in top command it will return 3.
+Mustatfa happens 2 times..........................returen 2.
+
+
+Head do not calcualate anything.
+It just took the 1st 10 values from list and return it.
