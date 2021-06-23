@@ -1,0 +1,28 @@
+Stats: 
+Used for statistical aggregation i.e. minimum value, maximum value, average, summation, distinct count, normal count etc.
+
+| stats <stats_function> as <name> by <field name>
+
+Count:
+| stats count by method
+
+Minimum:
+| stats min(status) by method
+
+maximum:
+| stats max(status) by method
+
+average:
+| stats avg(status) by method
+
+sum: 
+| stats sum(status) by method
+
+distinct count:
+| stats dc(status) by method
+
+values:
+| stats values(status) by method
+
+
+we can use multiple stats function together.
