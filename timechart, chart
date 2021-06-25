@@ -1,0 +1,38 @@
+timechart:
+It is similar like stats command.
+It will show values on time interval, when the log is genereted.
+
+| timechart <stats_func> by <field name>
+
+By default
+if the query runs for 24 hours, timechart will have interval of 30 mins.
+if the query runs for 60 mins, timechart will have interval of 1 min.
+if the query runs for 15 min, timechart will have interval of 10 sec.
+
+attribute to ustomize the interval:
+
+| timechart <span=..> <stats_func> by <field name>
+
+s--> sec
+m-->min
+h-->hour
+d-->day
+w-->week
+mon-->month
+
+span=1s
+span=1d
+
+in stats command we can use multiple splite by fields but in timechart we can use only one split by field.
+in stats and timechart we can use multiple functions.
+
+
+what is the others and null in timechart command?
+
+
+chart:
+
+chart <stats_func> over <field_name_1> by <field_name_2>
+
+field_name_1 will come across row.
+field_name_2 will come across column.
