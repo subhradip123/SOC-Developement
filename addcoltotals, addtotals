@@ -1,0 +1,24 @@
+addcoltotals:
+Add an additional row summation of the field value.
+Have to use table of stats command 1st then addcoltotals.
+
+| addcoltotals <fields_name>
+
+| addcoltotals labelfield=<field_name_1>
+Total appears below field_name_1 collumn
+
+| addcoltotals labelfield=<field_name_1> label="desired name"
+
+addtotals:
+add a rowwise total at right side.
+
+| addtotals<field_value1> <field_value2> ....
+It will add the written field_value1, field_value2
+
+addtotals have 5 atrributes.
+
+| addtotals fieldname="desired name"
+this attribute replace total with your desired name.
+
+| addtotals col=t
+Will add an extra row of total against collumn
