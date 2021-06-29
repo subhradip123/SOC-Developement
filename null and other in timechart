@@ -1,0 +1,25 @@
+Other in timechart:
+BY default timechart returns top 10 field values as column.
+The remaining values lies inside other.
+| timechart limit=0 ......
+
+
+What is null in timechart:
+
+Sai is 25 years old.
+Kapil is 26 years old.
+Mustafa is 26 years old.
+Dibyangsu is 25 years old.
+         is 26 years old.
+
+If we use timechart against name, then since the 5th event do not contain name it will be treated as null.
+
+
+
+Omit Other and null:
+
+| usenull=f ----> null vanish
+| useother=f ---->other vanish and top 10 column will be shown.
+
+| fillnull ----> replace null with "0".
+| fillnull value= "desired value" ----> replace null with a desired value.
