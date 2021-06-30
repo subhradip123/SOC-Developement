@@ -1,0 +1,35 @@
+Eval: (evaluate)
+We can use mathetical logics with eval command.
+
+| eval "new_field_name" = logic 
+
+| eval "new_field_name1" = logic 1, "new_field_name2"=logic 2, "new_field_name3"= logic 3 
+
+
+Concatinate:
+Use to concatinate two values one beside another.
+
+| eval "new" =<field_name 1>.<field_name 2>
+field_name 1field_name 2
+
+| eval"new" = Kapil.Sai
+KapilSai
+
+| eval "name" = Kapil."space".Abc
+Kapil Abc.
+
+. is used to concatinate two field values.
+If we want to use space or any symbol then have to to put it inside"...."
+
+Round up a number:
+| eval "new_field" = round(field_name,<digit>) [round up to degit]
+                   = round(field_name)  [round up to zero decimal]
+				   
+
+Lower case/upper case:
+| eval "new_field_name" = lower(field_name)
+| eval "new_field_name" = upper(field_name)
+
+
+length of a field value(how many letter or digits are there in that field value)
+| eval "new_field"= len(field name)
