@@ -1,0 +1,13 @@
+Field extraction:
+There are two types of field extraction based on on the time when it is extracted.
+1. Index-time field extraction:
+If we extract field before data get stored in indexer then it is index-time field extraction.
+It is done on HF and IDX.
+
+2. Search-time field extraction:
+Done after data get stored in indexer.
+Can be done on IDX and SH.
+
+There are two ways in which we can extract field.
+1.Interactive field extraction.
+2. Regular expression(rex).
