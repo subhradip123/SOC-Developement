@@ -1,0 +1,41 @@
+conditional function:
+
+if...else:
+|eval "new_field" = if(condition,"value to show for the condition","else value to show")
+
+eg.index=_internal sourcetype=splunkd_ui_access
+| table bytes | dedup bytes
+| eval "mb" = round(bytes/1024,2)
+| eval "memory_status" = if(mb<3,"low_memory","all_good")
+
+multiple if:
+| eval "new_field" = if(condition 1,"value to show for condition 1",if(condition 2,"value to show for condition 2""else value to show"))
+
+eg. index=_internal sourcetype=splunkd_ui_access
+| table bytes | dedup bytes
+| eval "mb" = round(bytes/1024,2)
+| eval "memory_status" = if(mb<3,"low_memory",if(mb<60,"good","exceed"))
+
+
+case:
+
+| eval "new_field" = case(case1,"value to show for case1", case2, "value to show for case2".............,default case,"value to show for the default case")
+In this default case we'll write any universal truth, say, 1=1 or 2=2.
+
+eg. index=_internal sourcetype=splunkd_ui_access
+| table bytes | dedup bytes
+| eval "mb" = round(bytes/1024,2)
+| eval "memory_status" = case(mb<3,"low_memory", mb<60 and mb>3, "good",1=1,"exceed_memory")
+
+H.W
+write down a case function for specifing http_status.
+
+
+append:
+query 1 | append[|search query 2]
+
+appendcols:
+query 1 | appendcols[|search query 2]
+
+addepndcols disadvantage:
+If there is two column with same name in two query, it will show values from 1st query.
