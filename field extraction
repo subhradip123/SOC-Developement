@@ -11,3 +11,11 @@ Can be done on IDX and SH.
 There are two ways in which we can extract field.
 1.Interactive field extraction.
 2. Regular expression(rex).
+
+
+
+kapil Vudakam is 26 years old.
+Ayan@Maity is 25 years old.
+Subhradip_Baidya is 26 years old.
+
+whenever data is in unsttructured format, have to use regular expression.
