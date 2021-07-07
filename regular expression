@@ -1,0 +1,17 @@
+rex:
+...| rex field=<field_name> ".......(?<field_name>......)......."
+e.g. index=_internal sourcetype=splunkd_ui_access | rex field=_raw ".*\d+\:(?<a_time>\d+\:\d+\:\d+)\.\d+.*"
+
+\w --->word/charecter
+\d --->digit
+\s --->space
+? ---->0 or 1 occurance
++ ----> 1 or more occurance
+.* ---> all
+\symbol --> symbol
+
+For more keyword
+https://www.debuggex.com/cheatsheet/regex/javascript
+
+How to test a regular expression:
+regex101.com
