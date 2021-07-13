@@ -1,0 +1,34 @@
+Time conversion:
+
+Epoch time:(unix time)
+It is how many seconds elapsed from 1970 1st jan 00:00 to till date.
+
+strptime ----> converts human readable time to epoch time
+strftime ----> converts epoch time to human readable time.
+
+| eval <epoch>= strptime('human readable time field name',"format in which human readable time is")
+| eval <humanreadable_time>= strftime('epoch time field name',"format in which to convert")
+
+%d --> date
+%m --> month(01,02,....,12)
+%b --> month(Jan,Feb,...,Dec)
+%B --> month(January, February, ....)
+%y --> year(19,20,21...)
+%Y --> year(2019,2020,...)
+%H --> hour(0-23)
+%I --> hour(0-12)
+%M --> minute
+%S --> seconds
+%3N --> milisecond
+%6N --> microsecond
+%p --> AM, PM
+%P --> am,pm
+%c --> local time
+
+index=_internal sourcetype= splunkd_ui_access | rex field=_raw ".*\[(?<date_1>\d+\/\w+\/\d+)\:.*]" | table date_1 | dedup date_1
+| eval date_epoch= strptime('date_1',"%d/%b/%Y")
+| eval date_2= strftime('date_epoch',"%d:%B:%y")
+
+
+H.W:
+search macroes
