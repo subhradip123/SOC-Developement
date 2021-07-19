@@ -1,0 +1,31 @@
+Cron schedule:
+
+* * * * *
+1 2 3 4 5
+
+1*--> Minutes of an hour(0-59)
+2*--> hour of a day (0-23)
+3*--> day of a month(1-31)
+4*--> month of a year(1-12)
+5*--> Day of a week(0-7)[0,7-Sunday.1-monday.2-tuesday......]
+
+
+
+25 * * * * --> 6:25, 7:25, 8:25
+*/25 * * * *--> 6:25, 6:50, 7:15
+
+0 6 * * * -->6:00 am
+10 6,18 * * * --> 6:10 am, 6:10 pm
+0 */2 * * * ---> 6, 8 , 10
+
+0 10 20,26 * * --> 20th at 10:00 am, 26th at 10:00 am
+15 10 */5 * * --> 10:15 am at every 5 days
+0 9 1,3,5 * *
+
+0 9 * * 7--> every sunday at 9:00 am
+
+
+Next session
+tuesday
+thrusday
+saterday
