@@ -1,0 +1,11 @@
+look up:
+csv: comma seperated value
+
+| inputlookup <dev.csv>  ----> see the contains of csv file
+
+
+
+name   salery  age
+sai    50k      25
+kap             26
+sub    60k  
